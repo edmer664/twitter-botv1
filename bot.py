@@ -29,13 +29,15 @@ def counter(startVal):
 keeper = True
 numInd = 0
 while keeper:
+time.sleep(60)
+
     for tweet in tweepy.Cursor(api.search, search).items(nrTweets):
 
         numInd = numInd + counter(0)
         try:
             tweet.favorite()
             print(str(numInd) + ' ' + 'Tweet liked')
-            time.sleep(8)
+            time.sleep(20)
         except tweepy.TweepError as e:
             print(str(numInd) + ' ' + e.reason)
-            time.sleep(8)
+            time.sleep(20)
