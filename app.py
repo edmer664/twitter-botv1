@@ -17,6 +17,8 @@ search = 'nicagajonera'
 
 nrTweets = 500
 
+api.update_status('Initiating')
+
 
 def counter(startVal):
     num = startVal
