@@ -29,7 +29,7 @@ def counter(startVal):
 keeper = True
 numInd = 0
 while keeper:
-time.sleep(60)
+    time.sleep(60)
 
     for tweet in tweepy.Cursor(api.search, search).items(nrTweets):
 
