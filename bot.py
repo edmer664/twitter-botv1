@@ -18,7 +18,7 @@ search = 'nicagajonera'
 nrTweets = 500
 
 
-
+#this is a test edit
 
 def counter(startVal):
     num = startVal
