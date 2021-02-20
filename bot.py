@@ -4,6 +4,8 @@ import os
 from os import environ
 
 # Written by edmer
+
+# Provide this with your own keys
 CONSUMER_KEY = environ['CONSUMER_KEY']
 CONSUMER_SECRET = environ['CONSUMER_SECRET']
 ACCESS_KEY = environ['ACCESS_KEY']
@@ -13,12 +15,14 @@ ACCESS_SECRET = environ['ACCESS_SECRET']
 auth = tweepy.OAuthHandler(CONSUMER_KEY, CONSUMER_SECRET)
 auth.set_access_token(ACCESS_KEY, ACCESS_SECRET)
 api = tweepy.API(auth, wait_on_rate_limit=True, wait_on_rate_limit_notify=True)
-search = 'nicagajonera'
+
+# this is where you put the topic to like
+search = '#100DaysOfCode'
 
 nrTweets = 500
 
 
-#this is a test edit
+
 
 def counter(startVal):
     num = startVal
@@ -29,6 +33,7 @@ def counter(startVal):
 keeper = True
 numInd = 0
 while keeper:
+    
     time.sleep(60)
 
     for tweet in tweepy.Cursor(api.search, search).items(nrTweets):
