@@ -1,3 +1,7 @@
-# danicaFanbot
+This is a twitter bot written in python3 made by tweepy.
 
-this is just a simple automation to like every post of my crush in the twitter
+The code is specified to like a certain topic 
+
+You can download this and manipulate the bot to your liking.
+
+
